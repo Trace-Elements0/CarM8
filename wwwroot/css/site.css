@@ -2,8 +2,6 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background: url(images/open-road1.png) no-repeat center fixed;
-    background-size: cover;
 }
 
 a, .btn-link {
