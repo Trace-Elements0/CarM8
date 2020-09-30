@@ -1,5 +1,5 @@
 # CarM8
-    Not all drivers have a new vehicle that comes with the support of a dealership reminding them of their vehicles
+   Not all drivers have a new vehicle that comes with the support of a dealership reminding them of their vehicles
 required maintenance. CarM8, <i> will support their users by ridding them of having to remember when their vehicle 
 needs maintenance. </i> By providing information on their vehicle the application will provide a recommended vehicle 
 maintenance schedule and provide it users at no cost. By compiling a full list of vital vehicle maintenance users
@@ -8,7 +8,7 @@ their car it just might not come on. Most vehicles remind you when they need an 
 of many of other maintenance procedures to include but not limited to: tire rotation, battery visual checks, 
 brake pad replacement, brake fluid swap, radiator flush, transmission fluid change, drive belt visual inspection,
 checking oil levels, engine air filter, cabin air filter.
-
+## Maintenence Schedule, and Miles Per Gallon
   Additionally, another feature CarM8 has will offer is an MPG calculator. When car shopping, the fuel economy 
 bolstered by dealerships is often times a chief consideration alongside safety or warranty. As vehicles age however
 and the drivers along with their vehicle have long been forgotten by their dealership, that MPG rating may not be
