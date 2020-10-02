@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 using main_CarM8.Data;
+using Microsoft.AspNetCore.Identity;
 
 namespace main_CarM8
 {
@@ -52,6 +53,7 @@ namespace main_CarM8
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllers();
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
             });
