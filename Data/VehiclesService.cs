@@ -20,7 +20,7 @@ namespace main_CarM8.Data
             return _context.Vehicles.AsNoTracking();
         }
 
-        public async Task<Vehicles> GetHelpDeskTicketAsync(string HelpDeskTicketGuid)
+        /*public async Task<Vehicles> GetHelpDeskTicketAsync(string HelpDeskTicketGuid)
         { 
             // Get the existing record.
             var ExistingVehicels = await _context.Vehicles 
@@ -28,7 +28,7 @@ namespace main_CarM8.Data
                 .Where(x => x.TicketGuid == HelpDeskTicketGuid) 
                 .AsNoTracking() .FirstOrDefaultAsync(); 
             return ExistingTicket;
-        } 
-        public Task<HelpDeskTickets> CreateTicketAsync(HelpDeskTickets newHelpDeskTickets)
+        } */
+        //public Task<HelpDeskTickets> CreateTicketAsync(HelpDeskTickets newHelpDeskTickets);
     }
 }
