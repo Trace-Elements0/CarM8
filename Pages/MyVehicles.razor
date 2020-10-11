@@ -1,7 +1,40 @@
 ﻿@page "/myvehicles"
+@inherits OwningComponentBase<VehiclesService>
 
-<h3>MyVehicles</h3>
+@if (vehicles == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Color</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var vehicle in vehicles)
+            {
+                <tr>
+                    <td>@vehicle.Year</td>
+                    <td>@vehicle.Make</td>
+                    <td>@vehicle.Model</td>
+                    <td>@vehicle.Color</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
 
 @code {
+    private Vehicles[] vehicles;
 
+    protected override async Task OnInitializedAsync()
+    {
+        vehicles = await VehiclesService.GetVehicles();
+    }
 }

@@ -34,6 +34,7 @@ namespace main_CarM8
             services.AddSingleton<WeatherForecastService>();
             services.AddDbContext<Carm8DataContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<VehiclesService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
