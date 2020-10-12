@@ -17,7 +17,6 @@ namespace main_CarM8.Data
         public string Engine { get; set; }
         public int Mileage { get; set; }
         public string FuelCapacity { get; set; }
-
-        public virtual Profiles Vehicle { get; set; }
+        public virtual Profiles? Vehicle { get; set; }
     }
 }

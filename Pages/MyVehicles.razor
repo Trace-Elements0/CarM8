@@ -1,5 +1,7 @@
 ﻿@page "/myvehicles"
-@inherits OwningComponentBase<VehiclesService>
+@using main_CarM8.Data
+@using Microsoft.EntityFrameworkCore.Internal
+@inject VehiclesService vs 
 
 @if (vehicles == null)
 {
@@ -31,10 +33,17 @@ else
 }
 
 @code {
-    private Vehicles[] vehicles;
+    private IQueryable<Vehicles> vehicles;
 
-    protected override async Task OnInitializedAsync()
+
+    protected override void OnInitialized()
     {
-        vehicles = await VehiclesService.GetVehicles();
+       vehicles = vs.GetVehicles();
     }
+
+   @* protected override async Task OnInitializedAsync()
+    {
+        vehicles = await vs.GetVehiclesAsync();
+    }*@
+
 }
