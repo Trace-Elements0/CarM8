@@ -1,7 +1,49 @@
 ﻿@page "/myvehicles"
+@using main_CarM8.Data
+@using Microsoft.EntityFrameworkCore.Internal
+@inject VehiclesService vs 
 
-<h3>MyVehicles</h3>
+@if (vehicles == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Color</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var vehicle in vehicles)
+            {
+                <tr>
+                    <td>@vehicle.Year</td>
+                    <td>@vehicle.Make</td>
+                    <td>@vehicle.Model</td>
+                    <td>@vehicle.Color</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
 
 @code {
+    private IQueryable<Vehicles> vehicles;
+
+
+    protected override void OnInitialized()
+    {
+       vehicles = vs.GetVehicles();
+    }
+
+   @* protected override async Task OnInitializedAsync()
+    {
+        vehicles = await vs.GetVehiclesAsync();
+    }*@
 
 }
