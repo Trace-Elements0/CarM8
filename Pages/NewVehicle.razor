@@ -1,0 +1,20 @@
+﻿@using main_CarM8.Data
+@using Syncfusion.Blazor.Notifications.Internal
+@inherits OwningComponentBase<VehiclesService>
+
+<h3>New Vehicle</h3>
+
+<SfToast ID="toast_default"
+         @ref="VehicleObj"
+         Title="Vehicle"
+         Content="@ToastContent"
+         TimeOut="5000">
+     <ToastPosition X="Right"></ToastPosition>
+</SfToast>
+
+
+@code {
+    SfToast VehicleObj;
+    private string ToastContent { get; set; } = "";
+
+}
